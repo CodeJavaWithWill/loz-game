@@ -1,0 +1,11 @@
+{
+  "questNumber": 1,
+  "title": "The Awakening",
+  "subtitle": "Who Am I?",
+  "story": { "intro": "", "success": "", "failure": null },
+  "objectives": [],
+  "validation": { "testClass": null, "commitPattern": null, "requiredFiles": [], "autoPass": false, "checks": [] },
+  "rewards": { "beans": 0, "xp": 0 },
+  "unlocks": { "nextQuest": 2, "sideQuests": [] },
+  "hints": []
+}

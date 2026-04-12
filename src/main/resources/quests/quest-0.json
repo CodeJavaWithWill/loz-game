@@ -1,0 +1,24 @@
+{
+  "questNumber": 0,
+  "title": "Arrival",
+  "subtitle": "Welcome to Java Island",
+  "story": {
+    "intro": "You wake on wet sand.\nSalt stings your eyes. Waves crash rhythmically.\n\nStrange geometric symbols cover the rocks around you:\n   { }  [ ]  ( )  ;\n\nA distant mountain pierces the clouds.\nFog lifts, revealing dense jungle ahead.\n\nAn ancient stone tablet materializes:\n\n   📜 ISLAND SURVIVAL GUIDE 📜\n\n   1. RUN THE GAME\n      Run: mvn exec:java\n      Or: Open App.java in your IDE and run it\n\n   2. THE GAME HAS THREE PHASES\n      Phase 1: Quest intro (shows automatically)\n      Phase 2: Your code (you write this!)\n      Phase 3: Validation & rewards (type 'done')\n\n   3. CURRENCY SYSTEM\n      🫘 Beans: Currency for trading\n      ⭐ XP: Measure of knowledge\n\n   4. SACRED RULES\n      App.java → PROTECTED. The framework controls this.\n      Your classes → YOURS. Shape your identity here!",
+    "success": "The stone glows briefly.\nYou understand the rules of this island.\nYour journey begins...",
+    "failure": null
+  },
+  "objectives": [
+    "Understand the game flow: intro → code → done",
+    "Learn the commands: done, hint, status, exit"
+  ],
+  "validation": {
+    "testClass": null,
+    "commitPattern": null,
+    "requiredFiles": [],
+    "autoPass": true,
+    "checks": []
+  },
+  "rewards": { "beans": 0, "xp": 0 },
+  "unlocks": { "nextQuest": 1, "sideQuests": [] },
+  "hints": []
+}
