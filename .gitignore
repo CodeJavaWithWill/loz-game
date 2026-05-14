@@ -1,7 +1,5 @@
 # Maven build output
-/target/
-
-# Compiled class files
+target/
 *.class
 
 # Package files
@@ -15,6 +13,8 @@ replay_pid*
 
 # IntelliJ IDEA
 .idea/
+*.iml
+out/
 
 # VS Code
 .vscode/
@@ -40,10 +40,11 @@ nbdist/
 .DS_Store
 Thumbs.db
 
-# Local Legends of Zava progress
+# Game state (local only)
+.quest-state.json
 .loz_progress
+*.db
 
-lib/concept.md
-lib/strory-script.md
-
-target/*
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+dependency-reduced-pom.xml
