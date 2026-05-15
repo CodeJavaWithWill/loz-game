@@ -7,6 +7,14 @@ target/
 *.war
 *.ear
 
+# Maven metadata / checksums
+**/maven-metadata*.xml
+**/*.lastUpdated
+**/*.sha1
+**/*.md5
+**/_remote.repositories
+**/resolver-status.properties
+
 # JVM crash logs
 hs_err_pid*
 replay_pid*
