@@ -4,21 +4,32 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mservices.games</groupId>
-        <artifactId>loz-parent</artifactId>
+        <artifactId>loz-dev</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>loz-game</artifactId>
 
 
+    <!-- Local repo: contains loz-engine jar committed to this repo.
+         Anyone who clones loz-game can build without needing loz-dev. -->
+    <repositories>
+        <repository>
+            <id>local-libs</id>
+            <url>file://${project.basedir}/libs</url>
+            <releases>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <checksumPolicy>ignore</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <!-- Single combined jar: loz-core + loz-validation bundled by loz-engine -->
         <dependency>
             <groupId>com.mservices.games</groupId>
-            <artifactId>loz-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.mservices.games</groupId>
-            <artifactId>loz-validation</artifactId>
+            <artifactId>loz-engine</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
