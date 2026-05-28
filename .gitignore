@@ -7,6 +7,9 @@ target/
 *.war
 *.ear
 
+# EXCEPTION: Allow committed JARs in libs/ (loz-engine bundle)
+!libs/**/*.jar
+
 # Maven metadata / checksums
 **/maven-metadata*.xml
 **/*.lastUpdated
