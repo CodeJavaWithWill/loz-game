@@ -2,13 +2,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.mservices.games</groupId>
-        <artifactId>loz-dev</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+    <groupId>com.mservices.games</groupId>
     <artifactId>loz-game</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>
+    </properties>
 
     <!-- Local repo: contains loz-engine jar committed to this repo.
          Anyone who clones loz-game can build without needing loz-dev. -->
