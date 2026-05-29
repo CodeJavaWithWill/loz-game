@@ -1,62 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.mservices.games</groupId>
-        <artifactId>loz-dev</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <artifactId>loz-engine</artifactId>
-
-    <!--
-        This module bundles loz-core + loz-validation (and their compile/runtime deps)
-        into a single "uber" jar. loz-game depends only on this one artifact.
-    -->
-
-    <dependencies>
-        <dependency>
-            <groupId>com.mservices.games</groupId>
-            <artifactId>loz-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.mservices.games</groupId>
-            <artifactId>loz-validation</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <!--
-                                createDependencyReducedPom=true (default) writes a
-                                dependency-reduced-pom.xml that strips the already-embedded
-                                deps, preventing loz-game from pulling them in twice.
-                            -->
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
-                            <transformers>
-                                <!-- Merges META-INF/services/* SPI files (needed for loz-validation) -->
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mservices.games</groupId>
+  <artifactId>loz-engine</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <description>POM was created from install:install-file</description>
 </project>
-
