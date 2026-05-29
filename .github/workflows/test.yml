@@ -35,6 +35,7 @@ jobs:
       run: mvn clean package -B
 
     - name: Verify executable jar
+      shell: bash
       run: |
         if [ -f "target/loz-game-1.0-SNAPSHOT.jar" ]; then
           echo "✓ Game JAR created successfully"
