@@ -18,6 +18,9 @@ target/
 **/_remote.repositories
 **/resolver-status.properties
 
+# Player code — not tracked (all player-written classes stay local)
+/src/main/java/com/mservices/games/game/
+
 # JVM crash logs
 hs_err_pid*
 replay_pid*
